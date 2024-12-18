@@ -1,7 +1,4 @@
 <?php
-
-#echo phpversion();
-
 # BD #
 
 $server = "localhost"; 
@@ -28,7 +25,7 @@ if ($conn->connect_error) {
 
 
 # token y website del BOT #
-$token = '7663270134:AAFgp7_TrVm6qNtDcPQn9guq3xDsYWIUYTo';
+$token = '7447527089:AAFL_nE9iKeGraDfFK26M0QutKHqNleCk2I';
 $website = 'https://api.telegram.org/bot'.$token;
 
 # leer mi webhook #
@@ -48,22 +45,22 @@ if (isset($update['message'])) {
             break;
 
         case '/r':
-            $response = "Por favor, regístrate...";
+            $response = "Por favor, regístrate en ";
             sendMessage($chatId, $response);
             break;
 
         case '/b':
-            $response = "Buscando datos...";
+            $response = "Buscando datos en ";
             sendMessage($chatId, $response);
             break;
 
         case '/m':
-            $response = "Modifica tus datos...";
+            $response = "Modifica tus datos en ";
             sendMessage($chatId, $response);
             break;
 
         case '/e':
-            $response = "Eliminar tu registro...";
+            $response = "Eliminar tu registro en";
             sendMessage($chatId, $response);
             break;
 
@@ -83,6 +80,8 @@ function sendMessage($chatId, $response)
 
 # ceerra la conexion a la bd #
 
-$conn->close();
+$conn->close(); 
+
 
 ?>
+
